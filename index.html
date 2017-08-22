@@ -1,0 +1,32 @@
+<html>
+
+	<head>
+		<title>jQuery Rating Plugin</title>
+		<link href="calendar.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src ="http://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src ="rating.js"></script>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$('#stars').rating();
+
+				$('#btnDeselect').click(function(){
+					$('#stars').quitRated();
+				});
+
+				$('#btnRating').click(function(){
+					alert($('#stars').getRating());
+				});
+			});
+		</script>
+	<head>
+	<body>
+		<h4>Por favor califique usando las estrellas</h4>
+		<div id ="stars"></div>
+		<br>
+		<button id ="btnDeselect">Deseleccionar</button>
+		<button id ="btnRating">Checar</button>
+	</body>
+</html>
